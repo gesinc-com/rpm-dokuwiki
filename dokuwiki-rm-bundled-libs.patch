@@ -1,0 +1,127 @@
+diff -ru dokuwiki-2018-04-22a-orig/vendor/composer/autoload_classmap.php dokuwiki-2018-04-22a/vendor/composer/autoload_classmap.php
+--- dokuwiki-2018-04-22a-orig/vendor/composer/autoload_classmap.php	2018-05-03 08:36:13.000000000 +0200
++++ dokuwiki-2018-04-22a/vendor/composer/autoload_classmap.php	2018-06-26 23:50:01.209053219 +0200
+@@ -14,7 +14,7 @@
+     'FeedImage' => $vendorDir . '/openpsa/universalfeedcreator/lib/Element/FeedImage.php',
+     'FeedItem' => $vendorDir . '/openpsa/universalfeedcreator/lib/Element/FeedItem.php',
+     'GPXCreator' => $vendorDir . '/openpsa/universalfeedcreator/lib/Creator/GPXCreator.php',
+-    'GeSHi' => $vendorDir . '/geshi/geshi/src/geshi.php',
++    'GeSHi' => '/usr/share/php/geshi.php',
+     'HTMLCreator' => $vendorDir . '/openpsa/universalfeedcreator/lib/Creator/HTMLCreator.php',
+     'HtmlDescribable' => $vendorDir . '/openpsa/universalfeedcreator/lib/Element/HtmlDescribable.php',
+     'JSCreator' => $vendorDir . '/openpsa/universalfeedcreator/lib/Creator/JSCreator.php',
+@@ -27,9 +27,9 @@
+     'RSSCreator10' => $vendorDir . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator10.php',
+     'RSSCreator20' => $vendorDir . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator20.php',
+     'UniversalFeedCreator' => $vendorDir . '/openpsa/universalfeedcreator/lib/UniversalFeedCreator.php',
+-    'lessc' => $vendorDir . '/marcusschwarz/lesserphp/lessc.inc.php',
+-    'lessc_formatter_classic' => $vendorDir . '/marcusschwarz/lesserphp/lessc.inc.php',
+-    'lessc_formatter_compressed' => $vendorDir . '/marcusschwarz/lesserphp/lessc.inc.php',
+-    'lessc_formatter_lessjs' => $vendorDir . '/marcusschwarz/lesserphp/lessc.inc.php',
+-    'lessc_parser' => $vendorDir . '/marcusschwarz/lesserphp/lessc.inc.php',
++    'lessc' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++    'lessc_formatter_classic' => $vendorDir . '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++    'lessc_formatter_compressed' => $vendorDir . '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++    'lessc_formatter_lessjs' => $vendorDir . '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++    'lessc_parser' => $vendorDir . '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
+ );
+diff -ru dokuwiki-2018-04-22a-orig/vendor/composer/autoload_files.php dokuwiki-2018-04-22a/vendor/composer/autoload_files.php
+--- dokuwiki-2018-04-22a-orig/vendor/composer/autoload_files.php	2018-05-03 08:36:13.000000000 +0200
++++ dokuwiki-2018-04-22a/vendor/composer/autoload_files.php	2018-06-26 23:58:50.445743280 +0200
+@@ -6,6 +6,6 @@
+ $baseDir = dirname($vendorDir);
+ 
+ return array(
+-    '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
+-    'decc78cc4436b1292c6c0d151b19445c' => $vendorDir . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
++    '5255c38a0faeba867671b61dfda6d864' => '/usr/share/php/random_compat/random.php',
++    'decc78cc4436b1292c6c0d151b19445c' => '/usr/share/php/phpseclib/bootstrap.php',
+ );
+diff -ru dokuwiki-2018-04-22a-orig/vendor/composer/autoload_namespaces.php dokuwiki-2018-04-22a/vendor/composer/autoload_namespaces.php
+--- dokuwiki-2018-04-22a-orig/vendor/composer/autoload_namespaces.php	2018-05-03 08:36:13.000000000 +0200
++++ dokuwiki-2018-04-22a/vendor/composer/autoload_namespaces.php	2018-06-27 00:11:48.020301999 +0200
+@@ -6,6 +6,6 @@
+ $baseDir = dirname($vendorDir);
+ 
+ return array(
+-    'SimplePie' => array($vendorDir . '/simplepie/simplepie/library'),
+-    'EmailAddressValidator' => array($vendorDir . '/aziraphale/email-address-validator'),
++    'SimplePie' => array('/usr/share/php/php-simplepie'),
++    'EmailAddressValidator' => '/usr/share/php/php-email-address-validation',
+ );
+diff -ru dokuwiki-2018-04-22a-orig/vendor/composer/autoload_psr4.php dokuwiki-2018-04-22a/vendor/composer/autoload_psr4.php
+--- dokuwiki-2018-04-22a-orig/vendor/composer/autoload_psr4.php	2018-05-03 08:36:13.000000000 +0200
++++ dokuwiki-2018-04-22a/vendor/composer/autoload_psr4.php	2018-06-27 00:00:25.312215273 +0200
+@@ -8,5 +8,5 @@
+ return array(
+     'splitbrain\\phpcli\\' => array($vendorDir . '/splitbrain/php-cli/src'),
+     'splitbrain\\PHPArchive\\' => array($vendorDir . '/splitbrain/php-archive/src'),
+-    'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
++    'phpseclib\\' => array('/usr/share/php/phpseclib'),
+ );
+diff -ru dokuwiki-2018-04-22a-orig/vendor/composer/autoload_static.php dokuwiki-2018-04-22a/vendor/composer/autoload_static.php
+--- dokuwiki-2018-04-22a-orig/vendor/composer/autoload_static.php	2018-05-03 08:36:13.000000000 +0200
++++ dokuwiki-2018-04-22a/vendor/composer/autoload_static.php	2018-06-27 00:06:04.685749681 +0200
+@@ -7,8 +7,8 @@
+ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
+ {
+     public static $files = array (
+-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+-        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
++        '5255c38a0faeba867671b61dfda6d864' => '/usr/share/php/random_compat/random.php',
++        'decc78cc4436b1292c6c0d151b19445c' => '/usr/share/php/phpseclib/bootstrap.php',
+     );
+ 
+     public static $prefixLengthsPsr4 = array (
+@@ -34,7 +34,7 @@
+         ),
+         'phpseclib\\' => 
+         array (
+-            0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
++            0 => '/usr/share/php/phpseclib',
+         ),
+     );
+ 
+@@ -43,14 +43,14 @@
+         array (
+             'SimplePie' => 
+             array (
+-                0 => __DIR__ . '/..' . '/simplepie/simplepie/library',
++                0 => '/usr/share/php/php-simplepie',
+             ),
+         ),
+         'E' => 
+         array (
+             'EmailAddressValidator' => 
+             array (
+-                0 => __DIR__ . '/..' . '/aziraphale/email-address-validator',
++                0 => '/usr/share/php/php-email-address-validation',
+             ),
+         ),
+     );
+@@ -64,7 +64,7 @@
+         'FeedImage' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Element/FeedImage.php',
+         'FeedItem' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Element/FeedItem.php',
+         'GPXCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/GPXCreator.php',
+-        'GeSHi' => __DIR__ . '/..' . '/geshi/geshi/src/geshi.php',
++        'GeSHi' => '/usr/share/php/geshi.php',
+         'HTMLCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/HTMLCreator.php',
+         'HtmlDescribable' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Element/HtmlDescribable.php',
+         'JSCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/JSCreator.php',
+@@ -77,11 +77,11 @@
+         'RSSCreator10' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator10.php',
+         'RSSCreator20' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator20.php',
+         'UniversalFeedCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/UniversalFeedCreator.php',
+-        'lessc' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+-        'lessc_formatter_classic' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+-        'lessc_formatter_compressed' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+-        'lessc_formatter_lessjs' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+-        'lessc_parser' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
++        'lessc' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++        'lessc_formatter_classic' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++        'lessc_formatter_compressed' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++        'lessc_formatter_lessjs' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
++        'lessc_parser' => '/usr/share/php/marcusschwarz-lesserphp/lessc.inc.php',
+     );
+ 
+     public static function getInitializer(ClassLoader $loader)
